@@ -1,5 +1,4 @@
 import requests
-import json
 import os
 
 def get_network_info():
@@ -26,12 +25,6 @@ def get_network_info():
 """
 
         print(result)
-
-        # Save to file
-        with open("host.txt", "w") as f:
-            f.write(result)
-
-        print("[✅] Infos enregistrées dans host.txt")
 
     except Exception as e:
         print(f"[❌] Erreur : {e}")
