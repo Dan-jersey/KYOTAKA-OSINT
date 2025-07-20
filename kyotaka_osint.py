@@ -1,4 +1,4 @@
-from modules import ip_lookup, domain_lookup, email_lookup, phone_lookup, username_lookup, host_lookup
+from modules import ip_lookup, domain_lookup, email_lookup, phone_lookup, username_lookup, hostfinder
 import os
 import time
 
@@ -19,7 +19,7 @@ def menu():
     print("\033[1;34m3\033[0m - Email Lookup")
     print("\033[1;34m4\033[0m - Phone Number Lookup")
     print("\033[1;34m5\033[0m - Username Lookup")
-    print("\033[1;34m6\033[0m - Host Finder (IP locale)")
+    print("\033[1;34m6\033[0m - HostFinder (IP Locale)")
     print("\033[1;31m7\033[0m - Quitter\n")
 
 def main():
@@ -38,7 +38,7 @@ def main():
         elif choix == "5":
             username_lookup.run()
         elif choix == "6":
-            host_lookup.get_network_info()
+            hostfinder.get_network_info()
         elif choix == "7":
             print("\n\033[1;31m[+] Fermeture de KYOTAKA OSINT...\033[0m")
             time.sleep(0.5)
