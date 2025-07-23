@@ -19,7 +19,6 @@ pkg install git python -y
 git clone https://github.com/Dan-jersey/KYOTAKA-OSINT
 cd KYOTAKA-OSINT
 pip install -r requirements.txt
-pip install phonenumbers
 python kyotaka_osint.py
 ```
 
