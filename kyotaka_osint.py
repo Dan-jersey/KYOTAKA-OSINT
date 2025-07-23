@@ -1,4 +1,4 @@
-from modules import ip_lookup, domain_lookup, email_lookup, phone_lookup, username_lookup, hostfinder
+from modules import ip_lookup, domain_lookup, email_lookup, phone_lookup, username_lookup, hostfinder, darkweb_lookup
 import os
 import time
 
@@ -20,7 +20,8 @@ def menu():
     print("\033[1;34m4\033[0m - Phone Number Lookup")
     print("\033[1;34m5\033[0m - Username Lookup")
     print("\033[1;34m6\033[0m - HostFinder (IP Locale)")
-    print("\033[1;31m7\033[0m - Quitter\n")
+    print("\033[1;34m7\033[0m - Dark Web Lookup (.onion via Ahmia)")
+    print("\033[1;31m8\033[0m - Quitter\n")
 
 def main():
     banner()
@@ -40,6 +41,8 @@ def main():
         elif choix == "6":
             hostfinder.get_network_info()
         elif choix == "7":
+            darkweb_lookup.darkweb_lookup()
+        elif choix == "8":
             print("\n\033[1;31m[+] Fermeture de KYOTAKA OSINT...\033[0m")
             time.sleep(0.5)
             break
